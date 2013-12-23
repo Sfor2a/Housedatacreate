@@ -24,18 +24,20 @@ public class Findfreezer {
 	
 	public int personcountspec ( int P ) { //何人家族かをいれるとそれに必要な範囲のスペックを教えてくれる
 		int spec = 0;
-		spec = ( 70 * P ) + 170;
+		if ( P == 1 ) spec = 140;
+		else spec = ( 70 * P ) + 170;
 		return spec; 
 	}
 	
 	public void findfreezerspec ( int spec, ReadFile RF ) { //スペックで冷蔵庫絞り込み
 		List < freezer > FL = RF.getfreezerlist(); //冷蔵庫リストを引っ張ってくる
-		int minspec = ( int ) ( spec * 0.94 ); //検索範囲の下限上限をせってい
-		int maxspec = ( int ) ( spec * 1.06 ); //この範囲のスペックで冷蔵庫を探す
+		int minspec = ( int ) ( spec * 0.91 ); //検索範囲の下限上限をせってい
+		int maxspec = ( int ) ( spec * 1.09 ); //この範囲のスペックで冷蔵庫を探す
 		for ( int i = 0; i < FL.size(); i++ ) {
 			int targetspec = FL.get(i).getSpec();
 			if ( targetspec > minspec && targetspec < maxspec ) {
 				setFFL ( FL.get(i) ); //絞り込んだ家具をリストに追加
+				System.out.println("スペック上限"+maxspec+"スペック下限"+minspec+"選んだスペック"+FL.get(i).getSpec());
 			}
 		}
 	}
@@ -59,6 +61,7 @@ public class Findfreezer {
         	CCFL = CFL.get( ranP );
         	sstr.append("貧乏");
         }
+        CFL.clear();
         return CCFL;
 	}
 }
