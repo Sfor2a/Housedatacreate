@@ -36,7 +36,7 @@ public class ReadFile {
 				if (str != null) { //読み込み行がnullでなければこのシーケンスを実行、行頭で判別する
 					if ( str.startsWith ( "#" ) ); //コメント文を検出すると何もしない
 					else {
-						String StAry[] = str.split ( ", ", 2 ); //"Housename "を除去
+						String StAry[] = str.split ( ", ", 2 ); //コストとスペックで二分
 						new freezer ( this, Integer.parseInt( StAry[1] ), Integer.parseInt( StAry[0] ) );
 					}
 				}			
