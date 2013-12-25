@@ -1,8 +1,4 @@
 Name —â‘ ŒÉ
-Value 138000
-Spec 400
-Minus 4
-Name —â‘ ŒÉ
-Value 34800
-Spec 140
+Value 193300
+Spec 426
 Minus 4

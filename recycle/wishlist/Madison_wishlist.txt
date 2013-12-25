@@ -1,0 +1,12 @@
+Name —â‘ ŒÉ
+Durability 90
+Value 113600
+Spec 365
+Name —â‘ ŒÉ
+Durability 60
+Value 113600
+Spec 365
+Name —â‘ ŒÉ
+Durability 10
+Value 113600
+Spec 365
